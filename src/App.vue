@@ -1,17 +1,35 @@
 <template>
   <div id="app">
     <img alt="Vue logo" src="./assets/logo.png">
-    <HelloWorld msg="Welcome to Your Vue.js App"/>
+     <dialogs :modals="dialogs">
+        <template v-slot:todo="{ todo }">
+          <input type="text" v-model="todo.inpt">
+          <p>{{todo.name}}</p>
+          <p>{{todo.id}}</p>
+          <p>{{todo.content}}</p>
+      </template>
+    </dialogs>
+    <button @click="addModel">新增modla</button>
   </div>
 </template>
 
 <script>
-import HelloWorld from './components/HelloWorld.vue'
+import Dialogs from '@/components/tslDialog/index'
 
 export default {
   name: 'App',
+  data () {
+    return {
+      dialogs: {}
+    }
+  },
   components: {
-    HelloWorld
+    Dialogs
+  },
+  methods: {
+    addModel () {
+      this.dialogs = { name: '新增弹窗', options: { width: 500 } }
+    }
   }
 }
 </script>
@@ -24,5 +42,6 @@ export default {
   text-align: center;
   color: #2c3e50;
   margin-top: 60px;
+  height: 100vh;
 }
 </style>
