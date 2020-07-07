@@ -40,32 +40,32 @@ export default {
 </script>
 ```
 ## props
-1.modals
+### 1.modals
 Type: `Object`<br>
 Required: `true`<br>
 Default: `{}`
 
-### modals.name
-弹窗标题
+#### modals.name
+弹窗标题<br>
 Type: `String`<br>
 Required: `true`<br>
 Default: ` `
 
-### modals.options
-弹窗样式
+#### modals.options
+弹窗样式<br>
 Type: `Object`<br>
 Required: `false`<br>
 Default: `{}`
 
 
-可设置弹窗样式
-*with   弹窗宽度
-*height   弹窗高度
-*left   弹窗距离左边距离
-*top   弹窗距离上边距离
+可设置弹窗样式<br>
+*with   弹窗宽度<br>
+*height   弹窗高度<br>
+*left   弹窗距离左边距离<br>
+*top   弹窗距离上边距离<br>
 
-### modals.data
-每个弹窗传入的数据
+#### modals.data
+每个弹窗传入的数据<br>
 Type: `Object`<br>
 Required: `false`<br>
 Default: `{}`
