@@ -290,16 +290,16 @@ export default {
     }
     .button.changmodel {
       // cursor: pointer;
-      background-image: url(../../assets/unsort.png);
+      background-image: url(./images/unsort.png);
       // background-size: 100% 100%;
     }
     .button.close {
-      background-image: url(../../assets/icon-close.png) ;
+      background-image: url(./images/icon-close.png) ;
       // background-size: 100% 100%;
       // cursor: pointer;
     }
     .button.pin {
-      background-image: url(../../assets/lock.png);
+      background-image: url(./images/lock.png);
     }
   }
   .dialog-body {
@@ -311,7 +311,7 @@ export default {
   user-select: auto;
    .button.pin{
     font-weight: bold;
-    background-image: url(../../assets/unlock.png);
+    background-image: url(./images/unlock.png);
   }
   .dialog-header {
     cursor: default;

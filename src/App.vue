@@ -14,7 +14,7 @@
 </template>
 
 <script>
-import Dialogs from '@/components/tslDialog/index'
+// import Dialogs from '@/components/tslDialog/index'
 
 export default {
   name: 'App',
@@ -23,9 +23,9 @@ export default {
       dialogs: {}
     }
   },
-  components: {
-    Dialogs
-  },
+  // components: {
+  //   Dialogs
+  // },
   methods: {
     addModel () {
       this.dialogs = { name: '新增弹窗', options: { width: 500 } }

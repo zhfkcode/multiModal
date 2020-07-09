@@ -160,7 +160,7 @@ export default {
   position: static;
 }
 .flex .dialog-drag .dialog-header .button.changmodel  {
-  background-image: url(../../assets/sort.png);
+  background-image: url(./images/sort.png);
 }
 .dialogs {
   position: fixed;
