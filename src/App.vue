@@ -1,7 +1,7 @@
 <template>
   <div id="app">
     <img alt="Vue logo" src="./assets/logo.png">
-     <dialogs :modals="dialogs">
+     <dialogs :modals="dialogs" :singlePop="isSingle">
         <template v-slot:todo="{ todo }">
           <input type="text" v-model="todo.inpt">
           <p>{{todo.name}}</p>
@@ -20,7 +20,9 @@ export default {
   name: 'App',
   data () {
     return {
-      dialogs: {}
+      dialogs: {},
+      count: 1,
+      isSingle: true
     }
   },
   // components: {
@@ -28,7 +30,8 @@ export default {
   // },
   methods: {
     addModel () {
-      this.dialogs = { name: '新增弹窗', options: { width: 500 } }
+      this.count++
+      this.dialogs = { name: this.count + '新增弹窗', options: { width: 500 } }
     }
   }
 }

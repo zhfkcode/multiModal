@@ -4,6 +4,7 @@
     :style='dialogStyle'
     @mousedown="startClick"
     :class='(!drag) ? "fixed":""'
+    v-show="isshow"
   >
     <div class="dialog-header"  @mousedown='mouseDown'>
       <div class="title">
@@ -39,6 +40,7 @@ export default {
       },
       left: 0,
       top: 0,
+      isshow: true,
       buttonClose: true,
       buttonPin: true,
       dragEnabled: true,
@@ -205,16 +207,19 @@ export default {
       }, 200)
     },
     center () {
-      let ww, wh
-      if (this.centered === 'window') {
-        ww = window.innerWidth
-        wh = window.innerHeight
-      }
-      if (this.centered === 'viewport') {
-        const body = document.body
-        ww = body.clientWidth + body.scrollLeft
-        wh = body.clientHeight + body.scrollTop
-      }
+      console.log('eneter')
+      // let ww, wh
+      // if (this.centered === 'window') {
+      //   ww = window.innerWidth
+      //   wh = window.innerHeight
+      // }
+      // if (this.centered === 'viewport') {
+      //   const body = document.body
+      //   ww = body.clientWidth + body.scrollLeft
+      //   wh = body.clientHeight + body.scrollTop
+      // }
+      let wh = window.innerHeight || document.documentElement.clientHeight || document.body.clientHeight
+      let ww = window.innerWidth || document.documentElement.clientWidth || document.body.clientWidth
       ww = ww || this.$parent.$parent.$el.clientWidth
       wh = wh || this.$parent.$parent.$el.clientHeight
       this.left = (ww / 2) - (this.$el.clientWidth / 2)
@@ -255,10 +260,6 @@ export default {
   border:1px solid;
   border-image:linear-gradient(139deg, rgba(83,140,206,1), rgba(5,77,125,1)) 1 1;
   height: auto;
-  animation-duration: 0.2s;
-  animation-name: dialog-anim;
-  animation-timing-function: ease-in;
-  // user-select: none;
   color: #fff;
   .dialog-header {
     position: relative;
