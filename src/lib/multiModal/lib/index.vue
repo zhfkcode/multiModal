@@ -1,8 +1,4 @@
 <template>
-<!-- <div class="" id="app"> -->
-  <!-- <div class="menu-container">
-    <button class="btn" @click='newDialog(style)'>new dialog</button>
-  </div> -->
   <div class="dialogs" :class="{flex:isFlex,modal:singleModal}">
     <transition-group
     @before-enter="beforeEnter"
@@ -56,7 +52,6 @@
       </transition-group>
     </div>
   </div>
-<!-- </div> -->
 </template>
 
 <script>
@@ -272,9 +267,6 @@ p{
   position: fixed;
   top:0;
   left: 0;
-  // width: 100%;
-  // height: 100%;
-  // background: rgba(0,0,0,.6);
   z-index: 100;
 }
 .modal.dialogs {

@@ -168,8 +168,8 @@ export default {
           const x = event.clientX
           const y = event.clientY
           // 边界处理
-          const limitLeft = document.body.offsetWidth - this.$el.clientWidth
-          const limitTop = document.body.offsetHeight - this.$el.clientHeight
+          const limitLeft = window.innerWidth - this.$el.clientWidth
+          const limitTop = window.innerHeight - this.$el.clientHeight
           const left = x + this.offset.x
           const top = y + this.offset.y
           this.left = left < 0 ? 0 : left > limitLeft ? limitLeft : left

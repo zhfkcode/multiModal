@@ -207,17 +207,6 @@ export default {
       }, 200)
     },
     center () {
-      console.log('eneter')
-      // let ww, wh
-      // if (this.centered === 'window') {
-      //   ww = window.innerWidth
-      //   wh = window.innerHeight
-      // }
-      // if (this.centered === 'viewport') {
-      //   const body = document.body
-      //   ww = body.clientWidth + body.scrollLeft
-      //   wh = body.clientHeight + body.scrollTop
-      // }
       let wh = window.innerHeight || document.documentElement.clientHeight || document.body.clientHeight
       let ww = window.innerWidth || document.documentElement.clientWidth || document.body.clientWidth
       ww = ww || this.$parent.$parent.$el.clientWidth

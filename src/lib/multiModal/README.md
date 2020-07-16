@@ -6,7 +6,7 @@ Use the component:
 <template>
   <div id="app">
     <img alt="Vue logo" src="./assets/logo.png">
-     <dialogs :modals="dialogs">
+     <dialogs :modals="dialogs" :singlePop="isSingle">
         <template v-slot:todo="{ todo }">
           <input type="text" v-model="todo.inpt">
           <p>{{todo.name}}</p>
@@ -25,7 +25,8 @@ export default {
   name: 'App',
   data () {
     return {
-      dialogs: {}
+      dialogs: {},
+      isSingle: true
     }
   },
   components: {
@@ -40,7 +41,14 @@ export default {
 </script>
 ```
 ## props
-### 1.modals
+### 1.singlePop
+Type: `Boolean`<br>
+Required: `false`<br>
+Default: `false`<br>
+多个弹窗单个展示模式，页面只能展示一个，多余底部船坞存放。
+
+
+### 2.modals
 Type: `Object`<br>
 Required: `true`<br>
 Default: `{}`
